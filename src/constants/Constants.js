@@ -3,6 +3,7 @@ export const EVENT_TYPES = {
   BOUNDARY: 'BOUNDARY',
   WICKET: 'WICKET',
   MATCH_STATUS: 'MATCH_STATUS',
+  UNKNOWN: 'UNKNOWN',
 };
 
 export const MAX_BALLS = 120;

@@ -83,9 +83,20 @@ export const generateMatchStatusEvent = (status, score, wickets, balls) => {
   };
 };
 
+export const generateUnknownEvent = () => {
+  return {
+    type: EVENT_TYPES.UNKNOWN,
+    payload: {
+      raw: '',
+      commentary: '⚠️ Unknown event type received: N/A',
+    },
+  };
+};
+
 export const generateEvent = playerName => {
   const r = Math.random();
   if (r < 0.1) return generateWicketEvent(playerName);
-  else if (r < 0.25) return generateBoundaryEvent();
+  else if (r < 0.3) return generateBoundaryEvent();
+  else if (r < 0.32) return generateUnknownEvent();
   return generateBallEvent();
 };
